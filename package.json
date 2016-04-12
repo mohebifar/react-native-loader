@@ -1,0 +1,28 @@
+{
+  "name": "react-native-waiting",
+  "version": "1.0.0",
+  "description": "A collection of loading spinners animated for react native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohebifar/react-native-waiting.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-component",
+    "waiting",
+    "loading",
+    "spinner",
+    "react-art"
+  ],
+  "author": "Mohamad Mohebifar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohebifar/react-native-waiting/issues"
+  },
+  "homepage": "https://github.com/mohebifar/react-native-waiting#readme"
+}
