@@ -1,5 +1,5 @@
 # react-native-loader
-A collection of loading spinners animated for react native that uses ReactART.
+A collection of animated spinners for react native using ReactART.
 
 ![Demo](https://www.dropbox.com/s/0xublvspbbbnwjn/rnloader.gif?dl=1)
 
