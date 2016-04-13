@@ -12,7 +12,7 @@ npm i -S react-native-loader
 ```
 
 ### Android
-It works out of the box for android.
+For Android, it works out of the box.
 
 ### iOS
 For iOS, add `ART.xcodeproj` from `node_modules/react-native/React/Libraries/ART` to your Libraries then link `libART.a`.
