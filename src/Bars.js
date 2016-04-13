@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, Animated, Easing, ART } from 'react-native';
+import React, { Component, PropTypes, Animated, ART } from 'react-native';
 const { Surface } = ART;
 
 import Bar from './animated/Bar';
@@ -6,7 +6,14 @@ import Bar from './animated/Bar';
 export default class Bubbles extends Component {
   static propTypes = {
     size: PropTypes.number,
+    color: PropTypes.string,
     spaceBetween: PropTypes.number
+  };
+
+  static defaultProps = {
+    spaceBetween: 4,
+    size: 20,
+    color: '#000'
   };
 
   state = {
@@ -19,16 +26,9 @@ export default class Bubbles extends Component {
     ]
   };
 
-  static defaultProps = {
-    spaceBetween: 4,
-    size: 20,
-    color: '#000'
-  };
-
-
   componentDidMount() {
     this.state.bars.forEach((val, index) => {
-      var timer = setTimeout(() => this.animate(index), index * 240);
+      const timer = setTimeout(() => this.animate(index), index * 240);
       this.timers.push(timer);
     });
   }
@@ -80,14 +80,12 @@ export default class Bubbles extends Component {
     const width = size / 3 * 5 + spaceBetween * 4;
     const height = size * 3;
 
-    return (<Surface
-      width={width}
-      height={height}>
+    return (<Surface width={width} height={height}>
       {this.renderBar(0)}
       {this.renderBar(1)}
       {this.renderBar(2)}
       {this.renderBar(3)}
       {this.renderBar(4)}
-    </Surface>)
+    </Surface>);
   }
 }

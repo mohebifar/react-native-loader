@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, Animated, Easing, ART } from 'react-native';
+import React, { Component, PropTypes, Animated, ART } from 'react-native';
 const { Surface } = ART;
 
 import Circle from './animated/Circle';
@@ -6,7 +6,14 @@ import Circle from './animated/Circle';
 export default class Bubbles extends Component {
   static propTypes = {
     size: PropTypes.number,
+    color: PropTypes.string,
     spaceBetween: PropTypes.number
+  };
+
+  static defaultProps = {
+    spaceBetween: 6,
+    size: 11,
+    color: '#000'
   };
 
   state = {
@@ -17,15 +24,9 @@ export default class Bubbles extends Component {
     ]
   };
 
-  static defaultProps = {
-    spaceBetween: 6,
-    size: 11,
-    color: '#000'
-  };
-
   componentDidMount() {
     this.state.circles.forEach((val, index) => {
-      var timer = setTimeout(() => this.animate(index), index * 300);
+      const timer = setTimeout(() => this.animate(index), index * 300);
       this.timers.push(timer);
     });
   }
@@ -80,12 +81,10 @@ export default class Bubbles extends Component {
     const width = size * 6 + spaceBetween * 2;
     const height = size * 2;
 
-    return (<Surface
-      width={width}
-      height={height}>
+    return (<Surface width={width} height={height}>
       {this.renderBubble(0)}
       {this.renderBubble(1)}
       {this.renderBubble(2)}
-    </Surface>)
+    </Surface>);
   }
 }

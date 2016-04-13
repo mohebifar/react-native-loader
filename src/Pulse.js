@@ -1,11 +1,17 @@
-import React, { Component, PropTypes, Animated, Easing, ART } from 'react-native';
+import React, { Component, PropTypes, Animated, ART } from 'react-native';
 const { Surface } = ART;
 
 import Circle from './animated/Circle';
 
 export default class Pulse extends Component {
   static propTypes = {
-    size: PropTypes.number
+    size: PropTypes.number,
+    color: PropTypes.string
+  };
+
+  static defaultProps = {
+    size: 14,
+    color: '#000'
   };
 
   state = {
@@ -13,11 +19,6 @@ export default class Pulse extends Component {
       x: 0.5,
       y: 1
     })
-  };
-
-  static defaultProps = {
-    size: 14,
-    color: '#000'
   };
 
   componentDidMount() {
@@ -54,9 +55,7 @@ export default class Pulse extends Component {
     const width = size * 2;
     const height = size * 2;
 
-    return (<Surface
-      width={width}
-      height={height}>
+    return (<Surface width={width} height={height}>
       <Circle
         radius={size}
         fill={color}
@@ -65,6 +64,6 @@ export default class Pulse extends Component {
         x={size}
         y={size}
       />
-    </Surface>)
+    </Surface>);
   }
 }

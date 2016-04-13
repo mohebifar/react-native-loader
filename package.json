@@ -4,7 +4,8 @@
   "description": "A collection of loading spinners animated for react native",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run eslint",
+    "eslint": "eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/mohebifar/react-native-waiting/issues"
   },
-  "homepage": "https://github.com/mohebifar/react-native-waiting#readme"
+  "homepage": "https://github.com/mohebifar/react-native-waiting#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.0.2",
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-react": "^4.3.0"
+  }
 }
