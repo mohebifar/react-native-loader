@@ -1,5 +1,5 @@
 {
-  "name": "react-native-waiting",
+  "name": "react-native-loader",
   "version": "1.0.0",
   "description": "A collection of loading spinners animated for react native",
   "main": "index.js",
