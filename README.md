@@ -1,7 +1,7 @@
 # react-native-loader
 A collection of animated spinners for react native using ReactART.
 
-![Demo](https://www.dropbox.com/s/0xublvspbbbnwjn/rnloader.gif?dl=1)
+![Demo](http://f.cl.ly/items/2W0s3L1s3H2W1i2l3q14/react-native-loader.gif)
 
 # Usage
 ## Installation
