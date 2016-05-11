@@ -7,13 +7,15 @@ export default class Bubbles extends Component {
   static propTypes = {
     size: PropTypes.number,
     color: PropTypes.string,
-    spaceBetween: PropTypes.number
+    spaceBetween: PropTypes.number,
+    bgColor:PropTypes.string
   };
 
   static defaultProps = {
     spaceBetween: 4,
     size: 20,
-    color: '#000'
+    color: '#000',
+    bgColor:'transparent'
   };
 
   state = {
@@ -76,11 +78,11 @@ export default class Bubbles extends Component {
   }
 
   render() {
-    const { size, spaceBetween } = this.props;
+    const { size, spaceBetween, bgColor } = this.props;
     const width = size / 3 * 5 + spaceBetween * 4;
     const height = size * 3;
 
-    return (<Surface width={width} height={height}>
+    return (<Surface width={width} height={height} style={{backgroundColor:bgColor}}>
       {this.renderBar(0)}
       {this.renderBar(1)}
       {this.renderBar(2)}

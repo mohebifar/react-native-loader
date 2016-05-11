@@ -6,12 +6,14 @@ import Circle from './animated/Circle';
 export default class Pulse extends Component {
   static propTypes = {
     size: PropTypes.number,
-    color: PropTypes.string
+    color: PropTypes.string,
+    bgColor:PropTypes.string
   };
 
   static defaultProps = {
     size: 14,
-    color: '#000'
+    color: '#000',
+    bgColor:'transparent'
   };
 
   state = {
@@ -50,12 +52,12 @@ export default class Pulse extends Component {
   }
 
   render() {
-    const { size, color } = this.props;
+    const { size, color, bgColor } = this.props;
     const { pulse } = this.state;
     const width = size * 2;
     const height = size * 2;
 
-    return (<Surface width={width} height={height}>
+    return (<Surface width={width} height={height} style={{backgroundColor:bgColor}}>
       <Circle
         radius={size}
         fill={color}
