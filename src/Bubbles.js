@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react-native';
+import React, { Component, PropTypes } from 'react';
 import { Animated, ART } from 'react-native';
 const { Surface } = ART;
 
