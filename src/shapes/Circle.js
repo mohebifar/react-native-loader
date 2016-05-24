@@ -1,4 +1,5 @@
-import React, { Component, PropTypes, ART } from 'react-native';
+import React, { Component, PropTypes } from 'react';
+import { ART } from 'react-native';
 const { Shape, Path } = ART;
 
 export default class Circle extends Component {
