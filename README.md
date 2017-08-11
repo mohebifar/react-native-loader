@@ -15,7 +15,7 @@ npm i -S react-native-loader
 For Android, it works out of the box.
 
 ### iOS
-For iOS, add `ART.xcodeproj` from `node_modules/react-native/React/Libraries/ART` to your Libraries then link `libART.a`.
+For iOS, add `ART.xcodeproj` from `node_modules/react-native/Libraries/ART` to your Libraries then link `libART.a`.
 
 ## How to use
 ```jsx
