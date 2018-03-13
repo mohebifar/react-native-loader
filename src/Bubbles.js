@@ -20,7 +20,7 @@ export default class Bubbles extends Component {
     bubblesCount: 3
   };
 
-  circles = [].legnth = bubblesCount;
+  circles = [].length = bubblesCount;
 
   state = {
     circles: this.circles.map(() => new Animated.Value(0))
