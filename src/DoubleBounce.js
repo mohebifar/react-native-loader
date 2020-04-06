@@ -37,11 +37,13 @@ export default class Pulse extends Component {
       .sequence([
         Animated.timing(this.state.bounces[index], {
           toValue: 1,
-          duration: 1000
+          duration: 1000,
+          useNativeDriver: false
         }),
         Animated.timing(this.state.bounces[index], {
           toValue: 0,
-          duration: 1000
+          duration: 1000,
+          useNativeDriver: false
         })
       ])
       .start(() => {

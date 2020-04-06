@@ -47,11 +47,13 @@ export default class Bubbles extends Component {
       .sequence([
         Animated.timing(this.state.bars[index], {
           toValue: this.props.size * 2.5,
-          duration: 600
+          duration: 600,
+          useNativeDriver: false
         }),
         Animated.timing(this.state.bars[index], {
           toValue: this.props.size,
-          duration: 600
+          duration: 600,
+          useNativeDriver: false
         })
       ])
       .start(() => {
