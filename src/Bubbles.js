@@ -9,21 +9,21 @@ export default class Bubbles extends Component {
   static propTypes = {
     size: PropTypes.number,
     color: PropTypes.string,
-    spaceBetween: PropTypes.number
+    spaceBetween: PropTypes.number,
+    bubblesCount: PropTypes.number
   };
 
   static defaultProps = {
     spaceBetween: 6,
     size: 11,
-    color: '#000'
+    color: '#000',
+    bubblesCount: 3
   };
 
+  circles = [].length = bubblesCount;
+
   state = {
-    circles: [
-      new Animated.Value(0),
-      new Animated.Value(0),
-      new Animated.Value(0)
-    ]
+    circles: this.circles.map(() => new Animated.Value(0))
   };
 
   componentDidMount() {
@@ -86,9 +86,7 @@ export default class Bubbles extends Component {
     const height = size * 2;
 
     return (<Surface width={width} height={height}>
-      {this.renderBubble(0)}
-      {this.renderBubble(1)}
-      {this.renderBubble(2)}
+      {this.circles.map((item, index) => this.renderBubble(index))}
     </Surface>);
   }
 }
