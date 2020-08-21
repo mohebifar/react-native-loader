@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Animated, ART } from 'react-native';
-const { Surface } = ART;
+import { Surface } from '@react-native-community/art';
 
 import Circle from './animated/Circle';
 
@@ -37,11 +37,13 @@ export default class Pulse extends Component {
       .sequence([
         Animated.timing(this.state.bounces[index], {
           toValue: 1,
-          duration: 1000
+          duration: 1000,
+          useNativeDriver: false
         }),
         Animated.timing(this.state.bounces[index], {
           toValue: 0,
-          duration: 1000
+          duration: 1000,
+          useNativeDriver: false
         })
       ])
       .start(() => {
