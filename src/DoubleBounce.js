@@ -25,7 +25,7 @@ export default class Pulse extends Component {
 
   componentDidMount() {
     this.animate(0);
-    setTimeout(() => this.animate(1), 1000);
+    this.animate(1);
   }
 
   componentWillUnmount() {
@@ -36,12 +36,12 @@ export default class Pulse extends Component {
     Animated
       .sequence([
         Animated.timing(this.state.bounces[index], {
-          toValue: 1,
+          toValue: index,
           duration: 1000,
           useNativeDriver: false
         }),
         Animated.timing(this.state.bounces[index], {
-          toValue: 0,
+          toValue: !index,
           duration: 1000,
           useNativeDriver: false
         })
