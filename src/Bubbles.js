@@ -15,7 +15,7 @@ export default class Bubbles extends Component {
   static defaultProps = {
     spaceBetween: 6,
     size: 11,
-    color: '#000'
+    color: 'red'
   };
 
   state = {

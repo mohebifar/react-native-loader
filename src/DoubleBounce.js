@@ -13,7 +13,7 @@ export default class Pulse extends Component {
 
   static defaultProps = {
     size: 14,
-    color: '#000'
+    color: 'red'
   };
 
   state = {
